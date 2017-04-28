@@ -17,28 +17,6 @@ function followed(eventMsg) {
   tweetIt("@" + screenName + " thanks for the follow");
 }
 
-// setInterval(tweetIT, 1000*60*60) tweet once an hour
-
-// tweetIt();
-
-// function tweetIt(txt) {
-//
-//
-//   var tweet = {
-//     status: txt
-//   };
-//
-//   T.post('statuses/update', tweet, tweeted);
-//
-//   function tweeted(err, data, response) {
-//     if (err) {
-//       console.log('something went wrong');
-//     }else {
-//       console.log('it worked!');
-//    }
-//   }
-// }
-
 
 tweetIt();
 
@@ -60,3 +38,8 @@ function tweetIt() {
    }
   }
 }
+
+
+
+
+// setInterval(tweetIT, 1000*60*60) tweet once an hour

@@ -23,6 +23,9 @@ var T = new Twit(config);
 //   }
 // }
 
+stream();
+
+function stream(data) {
 var  options = {
    screen_name: 'Qween_Wasabi',
    count: 40
@@ -33,3 +36,4 @@ T.get('statuses/user_timeline', options , function(err, data) {
     console.log(data[i].text);
   }
 });
+}
