@@ -1,27 +1,22 @@
 console.log("the bot lives");
 
 var Twit = require('twit');
-
-var config = require('./config');
-
-var T = new Twit(config);
+require('dotenv').config()
 
 
 
-// var params = {
-//   q: 'Nintendo since:2017-04-27',
-//   count: 10
-// };
-//
-// T.get('search/tweets', params, gotData);
-//
-//
-// function gotData(err, data, response) {
-//   var tweets = data.statuses;
-//   for (var i=0; i < tweets.length; i++) {
-//     console.log(tweets[i].text);
-//   }
-// }
+var T = {
+
+  consumer_key:         process.env.DATABASE_consumer_key,
+  consumer_secret:      process.env.DATABASE_consumer_secret,
+  access_token:         process.env.DATABASE_access_token,
+  access_token_secret:  process.env.DATABASE_access_token_secret,
+
+};
+
+
+
+
 
 stream();
 
@@ -37,3 +32,19 @@ T.get('statuses/user_timeline', options , function(err, data) {
   }
 });
 }
+
+
+// var params = {
+//   q: 'Nintendo since:2017-04-27',
+//   count: 10
+// };
+//
+// T.get('search/tweets', params, gotData);
+//
+//
+// function gotData(err, data, response) {
+//   var tweets = data.statuses;
+//   for (var i=0; i < tweets.length; i++) {
+//     console.log(tweets[i].text);
+//   }
+// }pug df
