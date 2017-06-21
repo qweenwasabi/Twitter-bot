@@ -25,7 +25,7 @@ function tweetIt() {
   // var r = Math.floor(Math.random()*100);
 
   var tweet = {
-    status: 'still playing with twitter bot'
+    status: 'I am going to create a bot to troll my brother!!'
   };
 
   T.post('statuses/update', tweet, tweeted);
