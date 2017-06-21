@@ -1,12 +1,19 @@
 console.log("the bot lives");
 
 var Twit = require('twit');
-var env = process.env.NODE_ENV || 'development';
-var config = require('./config')[env];
+require('dotenv').config()
 
 
 
-var T = new Twit(config);
+var T = {
+
+  consumer_key:         process.env.DATABASE_consumer_key,
+  consumer_secret:      process.env.DATABASE_consumer_secret,
+  access_token:         process.env.DATABASE_access_token,
+  access_token_secret:  process.env.DATABASE_access_token_secret,
+
+};
+
 
 
 
