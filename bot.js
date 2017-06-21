@@ -1,8 +1,10 @@
 console.log("the bot lives");
 
 var Twit = require('twit');
+var env = process.env.NODE_ENV || 'development';
+var config = require('./config')[env];
 
-var config = require('./config');
+
 
 var T = new Twit(config);
 
